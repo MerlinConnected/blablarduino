@@ -1,0 +1,19 @@
+<nav class="site-nav">
+	<div>
+
+		<h3>
+			<a href="/">
+				Gaëtan Jestin
+			</a>
+		</h3>
+		<ul>
+			{% for item in site.data.navigation %}
+			<li>
+				<a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active"{% endif %}>
+					{{ item.title }}
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</nav>
