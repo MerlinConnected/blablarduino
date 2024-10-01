@@ -96,9 +96,27 @@ article.post {
 	}
 
 	.post-content {
+		display: flex;
+		flex-direction: column;
+
+		h2,
+		h3,
+		ul,
+		> div,
+		table {
+			width: 72%;
+			margin: 0 auto;
+		}
+
 		p {
+			width: 100%;
 			&:first-of-type {
 				text-align: center;
+				margin: 0 auto;
+			}
+			&:not(.hero-image) {
+				width: 72%;
+				margin: 0 auto;
 			}
 		}
 	}

@@ -7,7 +7,9 @@ tags: Soudure
 
 Once upon a time, in a far-off land, there was a very lazy king who spent all day lounging on his throne. One day, his advisors came to him with a problem: the kingdom was running out of money.
 
-![My helpful screenshot](/images/240Reference.jpeg)
+<p class="hero-image">
+<img src="/images/240Reference.jpeg" alt="Super quick racecar">
+</p>
 
 ## The People of the Kingdom
 
