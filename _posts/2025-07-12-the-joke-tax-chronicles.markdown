@@ -13,7 +13,7 @@ Once upon a time, in a far-off land, there was a very lazy king who spent all da
 
 ## The People of the Kingdom
 
-The king thought long and hard, and finally came up with a brilliant plan: he would tax the jokes in the kingdom.
+The king thought long and hard, and finally came up with [a brilliant plan](https://gaetanjestin.com): he would tax the jokes in the kingdom.
 
 _"After all," he said, "everyone enjoys a good joke, so it's only fair that they should pay for the privilege."_
 
