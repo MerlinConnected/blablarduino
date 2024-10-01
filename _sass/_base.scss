@@ -11,8 +11,33 @@ h3 {
 }
 
 p,
-a {
+a,
+ul,
+ol,
+th,
+td {
 	color: $color-200;
+}
+
+span {
+	color: $color-100;
+
+	&.tag {
+		color: $color-100;
+		background-color: $color-700;
+		padding: 0.25rem 0.5rem;
+		border-radius: 4px;
+		display: inline-block;
+		font-size: 0.75rem;
+	}
+}
+
+code {
+	color: $color-200;
+	background-color: $color-800;
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.2rem;
+	display: inline-block;
 }
 
 time {
@@ -43,5 +68,38 @@ nav {
 		display: flex;
 		gap: 2rem;
 		padding: 0;
+	}
+}
+
+article.post {
+	margin: 4.5rem 0 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		time {
+			font-size: 0.875rem;
+		}
+
+		h1 {
+			text-align: center;
+			width: 32rem;
+			margin: 1.5rem 0;
+		}
+	}
+
+	.post-content {
+		p {
+			&:first-of-type {
+				text-align: center;
+			}
+		}
 	}
 }
