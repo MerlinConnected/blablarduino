@@ -6,19 +6,29 @@
 
 <body>
 	{% include nav.html %}
-	<main>
+	<main class="home">
 		<h1>{{ page.title }}</h1>
 		<div class="post-content">{{ content }}</div>
 
-		<h2>Recent Posts</h2>
+		<h2>Lire le dernier post</h2>
 		<div class="recent-posts">
-			{% for post in site.posts limit:3 %}
+			{% for post in site.posts limit:1 %}
 			<div class="post-preview">
+				{% if post.tags %} {% for tag in post.tags %}
+				<span class="tag">{{ tag }}</span>
+				{% endfor %} {% endif %}
 				<p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
 				<h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
 				<p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
 			</div>
-			{% endfor %}
+			{% if post.featured_image %}
+			<a href="{{ post.url | relative_url }}">
+				<img
+					src="{{ post.featured_image | relative_url }}"
+					alt="{{ post.title }}"
+				/>
+			</a>
+			{% endif %} {% endfor %}
 		</div>
 	</main>
 	{% include footer.html %}

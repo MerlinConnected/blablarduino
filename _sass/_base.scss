@@ -256,3 +256,58 @@ article.post {
 		}
 	}
 }
+
+main.home {
+	h1 {
+		margin: 6rem 0 1.5rem;
+	}
+
+	.post-content {
+		margin-bottom: 6rem;
+
+		> p:first-of-type {
+			width: 45rem;
+
+			@media all and (max-width: 768px) {
+				width: 100%;
+			}
+		}
+	}
+
+	h2 {
+		margin-top: 6rem;
+		margin-bottom: 3rem;
+	}
+
+	.recent-posts {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 3rem;
+		margin-bottom: 6rem;
+
+		@media all and (max-width: 768px) {
+			grid-template-columns: 1fr;
+		}
+
+		> div {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			.post-meta {
+				margin: 0.5rem 0;
+				color: $color-600;
+			}
+
+			h3 {
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		img {
+			border-radius: 8px;
+			aspect-ratio: 28/16;
+			object-fit: cover;
+		}
+	}
+}
