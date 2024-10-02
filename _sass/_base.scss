@@ -61,6 +61,10 @@ nav > div,
 footer > div {
 	margin: 0 auto;
 	max-width: 960px;
+
+	@media all and (max-width: 1024px) {
+		padding: 0 1rem;
+	}
 }
 
 nav {
@@ -70,6 +74,21 @@ nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media all and (max-width: 768px) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1rem;
+		}
+
+		.title {
+			font-size: 1.875rem;
+			text-decoration: none;
+
+			@media all and (max-width: 768px) {
+				font-size: 1.5rem;
+			}
+		}
 	}
 
 	ul {
@@ -121,6 +140,10 @@ article.post {
 			text-align: center;
 			width: 32rem;
 			margin: 1.5rem 0;
+
+			@media all and (max-width: 768px) {
+				width: 100%;
+			}
 		}
 	}
 
@@ -135,6 +158,10 @@ article.post {
 		table {
 			width: 72%;
 			margin: 0 auto;
+
+			@media all and (max-width: 768px) {
+				width: 100%;
+			}
 		}
 
 		h2,
@@ -155,6 +182,10 @@ article.post {
 			&:not(.hero-image) {
 				width: 72%;
 				margin: 0 auto 1.5rem;
+
+				@media all and (max-width: 768px) {
+					width: 100%;
+				}
 			}
 
 			&.hero-image {
