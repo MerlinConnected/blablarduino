@@ -30,6 +30,29 @@
 			</a>
 			{% endif %} {% endfor %}
 		</div>
+
+		<div class="history">
+			<h3>Tous les articles</h3>
+
+			<div class="container">
+				{% assign posts_by_year = site.posts | group_by_exp:"post", "post.date |
+				date: '%Y'" %} {% for year in posts_by_year %}
+				<div class="wrapper">
+					<span class="year">{{ year.name }}</span>
+					<div class="post-list">
+						{% for post in year.items %}
+						<div class="post-preview">
+							<span class="post-date">{{ post.date | date: "%b %-d" }}</span>
+							<h5>
+								<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+							</h5>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
 	</main>
 	{% include footer.html %}
 </body>

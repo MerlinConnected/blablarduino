@@ -284,7 +284,7 @@ main.simple-page {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 3rem;
-		margin-bottom: 6rem;
+		margin-bottom: 4rem;
 
 		@media all and (max-width: 768px) {
 			grid-template-columns: 1fr;
@@ -309,6 +309,41 @@ main.simple-page {
 			border-radius: 8px;
 			aspect-ratio: 28/16;
 			object-fit: cover;
+		}
+	}
+}
+
+.history {
+	h3 {
+		margin-top: 6rem;
+		margin-bottom: 3rem;
+	}
+
+	.container {
+		display: grid;
+		gap: 3rem;
+		.wrapper {
+			span.year {
+				font-weight: 600;
+			}
+
+			.post-list {
+				display: grid;
+				gap: 2rem;
+				margin-top: 3rem;
+
+				.post-preview {
+					display: flex;
+					align-items: center;
+					gap: 2rem;
+
+					.post-date {
+						color: $color-600;
+						font-size: 0.875rem;
+						font-weight: 600;
+					}
+				}
+			}
 		}
 	}
 }
