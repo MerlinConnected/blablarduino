@@ -314,8 +314,9 @@ main.simple-page {
 }
 
 .history {
+	margin-top: 6rem;
+	margin-bottom: 6rem;
 	h3 {
-		margin-top: 6rem;
 		margin-bottom: 3rem;
 	}
 
@@ -333,9 +334,14 @@ main.simple-page {
 				margin-top: 3rem;
 
 				.post-preview {
-					display: flex;
+					display: grid;
+					grid-template-columns: 5rem 1fr;
 					align-items: center;
-					gap: 2rem;
+
+					@media all and (max-width: 768px) {
+						grid-template-columns: 1fr;
+						gap: 0.5rem;
+					}
 
 					.post-date {
 						color: $color-600;
