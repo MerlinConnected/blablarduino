@@ -1,13 +1,19 @@
-<nav class="site-nav">
+<nav class="site-nav" role="navigation" aria-label="Navigation Principale">
 	<div>
-
-		<a href="/" class="title">
+		<a href="/" class="title" aria-label="Accueil - Gaëtan Jestin">
 			Gaëtan Jestin
 		</a>
-		<ul>
+		<ul role="menubar">
 			{% for item in site.data.navigation %}
-			<li>
-				<a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active"{% endif %}>
+			<li role="none">
+				<a 
+					href="{{ item.url | relative_url }}" 
+					role="menuitem"
+					{% if page.url == item.url %}
+						class="active"
+						aria-current="page"
+					{% endif %}
+				>
 					{{ item.title }}
 				</a>
 			</li>
