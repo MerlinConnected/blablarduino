@@ -4,4 +4,4 @@ title: Blog
 permalink: /
 ---
 
-Un blog consacré à partager mes divers bidouillages et réflexions. Peut-être que vous y trouverez vous aussi des choses qui vous intéressent, peut-être même jusqu`à bidouiller vous mêmes.
+Un blog dédié à partager mes expérimentations et réflexions. Peut-être y trouverez-vous des idées qui vous inspireront, et qui sait, vous pourriez même vous lancer dans vos propres bidouillages.
