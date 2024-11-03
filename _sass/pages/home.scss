@@ -84,7 +84,6 @@ main.simple-page {
 						align-items: center;
 
 						@media all and (max-width: 768px) {
-							grid-template-columns: 1fr;
 							gap: 0.5rem;
 						}
 
