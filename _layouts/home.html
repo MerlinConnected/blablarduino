@@ -25,21 +25,24 @@
 				<div class="latest-post" role="region" aria-labelledby="post-title">
 					{% for post in site.posts limit:1 %}
 					<article class="post-preview">
-						{% if post.tags %} {% for tag in post.tags %}
-						<span class="tag" role="tag">{{ tag }}</span>
-						{% endfor %} {% endif %}
-						<p class="post-meta">
-							<time datetime="{{ post.date | date_to_xmlschema }}"
-								>{{ post.date | date: "%B %-d, %Y" }}</time
-							>
-						</p>
-						<h3 id="post-title">
-							<a
-								href="{{ post.url | relative_url }}"
-								aria-label="Read more about {{ post.title }}"
-								>{{ post.title }}</a
-							>
-						</h3>
+						<div>
+							{% if post.tags %} {% for tag in post.tags %}
+							<span class="tag" role="tag">{{ tag }}</span>
+							{% endfor %} {% endif %}
+
+							<p class="post-meta">
+								<time datetime="{{ post.date | date_to_xmlschema }}"
+									>{{ post.date | date: "%B %-d, %Y" }}</time
+								>
+							</p>
+							<h3 id="post-title">
+								<a
+									href="{{ post.url | relative_url }}"
+									aria-label="Read more about {{ post.title }}"
+									>{{ post.title }}</a
+								>
+							</h3>
+						</div>
 						<p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
 					</article>
 					{% if post.featured_image %}

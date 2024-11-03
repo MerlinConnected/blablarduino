@@ -3,7 +3,9 @@ main.simple-page {
 	display: grid;
 	gap: 6rem;
 
-	padding: 6rem 0;
+	@media all and (max-width: 1024px) {
+		padding: 2rem 1rem;
+	}
 
 	.title {
 		display: grid;
@@ -33,18 +35,20 @@ main.simple-page {
 				grid-template-columns: 1fr;
 			}
 
-			> div {
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
+			article {
+				display: grid;
+				align-content: flex-start;
+				gap: 1.5rem;
 
-				.post-meta {
-					margin: 0.5rem 0;
-					color: $color-600;
+				> div {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 0.5rem;
 				}
 
-				h3 {
-					margin-bottom: 1.5rem;
+				.post-meta {
+					color: $color-600;
 				}
 			}
 
@@ -55,40 +59,40 @@ main.simple-page {
 			}
 		}
 	}
-}
 
-.history {
-	h3 {
-		margin-bottom: 3rem;
-	}
+	.history {
+		h3 {
+			margin-bottom: 3rem;
+		}
 
-	.container {
-		display: grid;
-		gap: 3rem;
-		.wrapper {
-			span.year {
-				font-weight: 600;
-			}
+		.container {
+			display: grid;
+			gap: 3rem;
+			.wrapper {
+				span.year {
+					font-weight: 600;
+				}
 
-			.post-list {
-				display: grid;
-				gap: 2rem;
-				margin-top: 3rem;
-
-				.post-preview {
+				.post-list {
 					display: grid;
-					grid-template-columns: 5rem 1fr;
-					align-items: center;
+					gap: 2rem;
+					margin-top: 3rem;
 
-					@media all and (max-width: 768px) {
-						grid-template-columns: 1fr;
-						gap: 0.5rem;
-					}
+					.post-preview {
+						display: grid;
+						grid-template-columns: 5rem 1fr;
+						align-items: center;
 
-					.post-date {
-						color: $color-600;
-						font-size: 0.875rem;
-						font-weight: 600;
+						@media all and (max-width: 768px) {
+							grid-template-columns: 1fr;
+							gap: 0.5rem;
+						}
+
+						.post-date {
+							color: $color-600;
+							font-size: 0.875rem;
+							font-weight: 600;
+						}
 					}
 				}
 			}
