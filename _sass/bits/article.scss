@@ -25,11 +25,7 @@ article.post {
 			}
 		}
 	}
-
 	.post-content {
-		display: flex;
-		flex-direction: column;
-
 		h2,
 		h3,
 		ul,
@@ -43,15 +39,6 @@ article.post {
 			}
 		}
 
-		h2,
-		h3 {
-			margin-bottom: 1.5rem;
-		}
-
-		h3 {
-			margin-top: 0.5rem;
-		}
-
 		p {
 			width: 100%;
 			&:first-of-type {
@@ -60,121 +47,7 @@ article.post {
 			}
 			&:not(.hero-image) {
 				width: 72%;
-				margin: 0 auto 1.5rem;
-
-				@media all and (max-width: 768px) {
-					width: 100%;
-				}
 			}
-
-			&.hero-image {
-				margin: 4rem 0 2.5rem;
-
-				img {
-					aspect-ratio: 96 / 46;
-					width: 100%;
-					border-radius: 8px;
-					object-fit: cover;
-				}
-			}
-
-			em {
-				display: inline-block;
-				font-style: italic;
-				color: $color-400;
-				border-left: 1px solid $color-400;
-				width: calc(100% - 1.5rem);
-				padding-left: 1.5rem;
-			}
-
-			img {
-				width: 100%;
-				border-radius: 4px;
-				object-fit: cover;
-			}
-		}
-
-		ul {
-			list-style-type: disc;
-			padding-left: 1.5rem;
-			display: grid;
-			gap: 0.5rem;
-			margin-bottom: 1.5rem;
-		}
-
-		table {
-			border-collapse: collapse;
-			margin-bottom: 1.5rem;
-
-			th,
-			td {
-				border: 1px solid $color-800;
-				padding: 0.5rem;
-			}
-
-			th {
-				color: $color-100;
-				font-weight: bold;
-			}
-
-			td {
-				color: $color-200;
-			}
-
-			tr {
-				&:nth-child(even) {
-					background-color: $color-800;
-				}
-			}
-		}
-
-		code {
-			color: $color-200;
-			background-color: $color-900;
-			border: 1px solid $color-800;
-			padding: 1rem 1rem;
-			border-radius: 4px;
-			display: inline-block;
-			width: 100%;
-			font-size: 14px;
-
-			.k {
-				color: #91b4d5;
-			} // Keyword
-			.nf {
-				color: #acd7ff;
-			} // Function name
-			.p {
-				color: #a6accd;
-			} // Parenthesis
-			.n {
-				color: #e4f0fb;
-			} // Name
-			.o {
-				color: #91b4d5;
-			} // Operator
-			.mi {
-				color: #5de4c7;
-			} // Number
-		}
-
-		hr {
-			border: 1px solid $color-800;
-			width: 72%;
-			margin: 0 auto 1.5rem;
-		}
-
-		kbd {
-			background-color: $color-800;
-			border-radius: 2px;
-			border: 1px solid $color-700;
-			box-shadow: 0 2px 0 0 $color-700 inset;
-			color: $color-200;
-			display: inline-block;
-			font-size: 0.85em;
-			line-height: 1;
-			padding: 2px 4px;
-			white-space: nowrap;
 		}
 	}
 }
