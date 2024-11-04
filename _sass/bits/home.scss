@@ -64,6 +64,18 @@ main.simple-page {
 	.history {
 		h3 {
 			margin-bottom: 3rem;
+			width: fit-content;
+
+			svg {
+				opacity: 0;
+				fill: $color-600;
+			}
+
+			&:hover {
+				svg {
+					opacity: 1;
+				}
+			}
 		}
 
 		.container {

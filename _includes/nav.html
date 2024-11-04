@@ -3,18 +3,22 @@
 		<a href="/" class="title" aria-label="Accueil - Gaëtan Jestin">
 			Gaëtan Jestin
 		</a>
-		<ul role="menubar">
+		<ul 
+			id="main-menu"
+			role="menubar"
+			aria-label="Menu principal"
+		>
 			{% for item in site.data.navigation %}
 			<li role="none">
 				<a 
 					href="{{ item.url | relative_url }}" 
 					role="menuitem"
 					{% if page.url == item.url %}
-						class="active"
 						aria-current="page"
 					{% endif %}
+					aria-label="{{ item.title }}"
 				>
-					{{ item.title }}
+					<span>{{ item.title }}</span>
 				</a>
 			</li>
 			{% endfor %}
