@@ -30,7 +30,6 @@ twitter_username: merlinconnected
 github_username: MerlinConnected
 
 # Build settings
-# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
