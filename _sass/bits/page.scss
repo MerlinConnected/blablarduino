@@ -2,6 +2,8 @@ main.simple-page {
 	display: grid;
 	gap: 2rem;
 	padding: 6rem 0;
+	flex: 1;
+	align-content: flex-start;
 
 	@media all and (max-width: 1024px) {
 		padding: 2rem 1rem;
