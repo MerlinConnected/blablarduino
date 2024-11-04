@@ -128,10 +128,53 @@ article.post {
 			}
 		}
 
+		code {
+			color: $color-200;
+			background-color: $color-900;
+			border: 1px solid $color-800;
+			padding: 1rem 1rem;
+			border-radius: 4px;
+			display: inline-block;
+			width: 100%;
+			font-size: 14px;
+
+			.k {
+				color: #91b4d5;
+			} // Keyword
+			.nf {
+				color: #acd7ff;
+			} // Function name
+			.p {
+				color: #a6accd;
+			} // Parenthesis
+			.n {
+				color: #e4f0fb;
+			} // Name
+			.o {
+				color: #91b4d5;
+			} // Operator
+			.mi {
+				color: #5de4c7;
+			} // Number
+		}
+
 		hr {
 			border: 1px solid $color-800;
 			width: 72%;
 			margin: 0 auto 1.5rem;
+		}
+
+		kbd {
+			background-color: $color-800;
+			border-radius: 2px;
+			border: 1px solid $color-700;
+			box-shadow: 0 2px 0 0 $color-700 inset;
+			color: $color-200;
+			display: inline-block;
+			font-size: 0.85em;
+			line-height: 1;
+			padding: 2px 4px;
+			white-space: nowrap;
 		}
 	}
 }

@@ -63,3 +63,5 @@ def joke_tax(joke_level):
 ### Closing thoughts
 
 The moral of the story is: never underestimate the power of a good laugh and always be careful of bad ideas.
+
+A sentence with <kbd>Ctrl</kbd> inbetween random words.
