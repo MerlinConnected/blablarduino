@@ -8,9 +8,13 @@
 	{% include nav.html %}
 	<main>
 		<article class="post">
-			{% if page.tags %} {% for tag in page.tags %}
-			<span class="tag">{{ tag }}</span>
-			{% endfor %} {% endif %}
+			{% if page.tags %}
+			<div>
+				{% for tag in page.tags %}
+				<span class="tag">{{ tag }}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
 			<div class="hero">
 				<time datetime="{{ page.date | date_to_xmlschema }}">
 					{{ page.date | date: "%d %B %Y" }}
